@@ -963,7 +963,7 @@ AFRAME.registerComponent('particleplayer', {
     };
   })(),
 
-  //_transformPlane: transformPlane
+  _transformPlane: transformPlane
 });
 
 // Use triangle geometry as a helper for rotating.
@@ -984,7 +984,6 @@ const tri = (function() {
  * Faces of a plane are v0, v2, v1 and v2, v3, v1.
  * Positions are 12 numbers: [v0, v1, v2, v3].
  */
-/*
 function transformPlane(
   particleIndex,
   geometry,
@@ -996,17 +995,17 @@ function transformPlane(
   const index = particleIndex * NUM_PLANE_POSITIONS;
 
   // Calculate first face (0, 2, 1).
-  tri.vertices[0].set(
+  tri.attributes.position.set(0,
     originalArray[index + 0],
     originalArray[index + 1],
     originalArray[index + 2]
   );
-  tri.vertices[1].set(
+  tri.attributes.position.set(1,
     originalArray[index + 3],
     originalArray[index + 4],
     originalArray[index + 5]
   );
-  tri.vertices[2].set(
+  tri.attributes.position.set(2,
     originalArray[index + 6],
     originalArray[index + 7],
     originalArray[index + 8]
@@ -1060,7 +1059,7 @@ function transformPlane(
   geometry.attributes.position.needsUpdate = true;
 }
 module.exports.transformPlane = transformPlane;
-*/
+
 function copyArray(dest, src) {
   dest.length = 0;
   for (let i = 0; i < src.length; i++) {
