@@ -692,7 +692,7 @@ AFRAME.registerComponent('particleplayer', {
         const ratio = data.img ? data.img.width / data.img.height : 1;
         tempGeometries.length = 0;
         for (let p = 0; p < this.numParticles; p++) {
-          let geometry = new THREE.PlaneBufferGeometry(
+          let geometry = new THREE.PlaneGeometry(
             0.1 * ratio * data.pscale,
             0.1 * data.pscale
           );
