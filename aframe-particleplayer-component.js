@@ -974,8 +974,8 @@ const tri = (function() {
 	vertices.push(new THREE.Vector3())
 	vertices.push(new THREE.Vector3())
 	vertices.push(new THREE.Vector3())
-	let geometry = new THREE.BufferGeometry().setFromPoints( vertices )
-  tri.setIndex(new BufferAttribute( [ 0, 1, 2 ], 1 ));
+	tri.setFromPoints( vertices );
+  tri.setIndex(new THREE.BufferAttribute( [ 0, 1, 2 ], 1 ));
   return tri;
 })();
 
