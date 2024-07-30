@@ -1015,7 +1015,7 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
-  console.log(tri.attributes.position.array[0]);
+  console.log(tri.attributes.position);
   array[index + 0] = tri.vertices[0].x;
   array[index + 1] = tri.vertices[0].y;
   array[index + 2] = tri.vertices[0].z;
