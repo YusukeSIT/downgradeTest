@@ -1028,7 +1028,7 @@ function transformPlane(
   array[index + 6] = tri.vertices[2].x;
   array[index + 7] = tri.vertices[2].y;
   array[index + 8] = tri.vertices[2].z;
-	*/
+  */
 
   // Calculate second face (2, 3, 1) just for the last vertex.
   tri.attributes.position.set(0,
