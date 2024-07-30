@@ -1041,7 +1041,7 @@ function transformPlane(
     originalArray[index + 7],
     originalArray[index + 8]
   );
-  tri.verattributes.position.set(2,
+  tri.attributes.position.set(2,
     originalArray[index + 9],
     originalArray[index + 10],
     originalArray[index + 11]
