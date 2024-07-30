@@ -970,13 +970,13 @@ AFRAME.registerComponent('particleplayer', {
 
 const tri = (function() {
   const tri = new THREE.BufferGeometry();
-  const vertices = [];
-	vertices.push(new THREE.Vector3());
-	vertices.push(new THREE.Vector3());
-	vertices.push(new THREE.Vector3());
-	tri.setFromPoints( vertices );
+  const vertices = new Float32Array( [
+    -5, 0, 0, // vertex 1
+    5, 0, 0,  // vertex 2 
+    0, 5, 0   // vertex 3
+  ], 3 );
+	tri.setAttribute('position', vertices);
   tri.setIndex(new THREE.BufferAttribute( new Float32Array([ 0, 1, 2 ]), 1 ));
-  console.log(tri);
   return tri;
 })();
 
@@ -984,6 +984,7 @@ const tri = (function() {
  * Faces of a plane are v0, v2, v1 and v2, v3, v1.
  * Positions are 12 numbers: [v0, v1, v2, v3].
  */
+/*
 function transformPlane(
   particleIndex,
   geometry,
@@ -1059,7 +1060,7 @@ function transformPlane(
   geometry.attributes.position.needsUpdate = true;
 }
 module.exports.transformPlane = transformPlane;
-
+*/
 function copyArray(dest, src) {
   dest.length = 0;
   for (let i = 0; i < src.length; i++) {
