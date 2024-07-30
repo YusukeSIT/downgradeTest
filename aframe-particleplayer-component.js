@@ -1015,16 +1015,16 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
-  console.log(tri.attributes.position);
-  array[index + 0] = tri.vertices[0].x;
-  array[index + 1] = tri.vertices[0].y;
-  array[index + 2] = tri.vertices[0].z;
-  array[index + 3] = tri.vertices[1].x;
-  array[index + 4] = tri.vertices[1].y;
-  array[index + 5] = tri.vertices[1].z;
-  array[index + 6] = tri.vertices[2].x;
-  array[index + 7] = tri.vertices[2].y;
-  array[index + 8] = tri.vertices[2].z;
+  console.log(tri.attributes.position[0]);
+  array[index + 0] = tri.attributes.position[0];
+  array[index + 1] = tri.attributes.position[1];
+  array[index + 2] = tri.attributes.position[2];
+  array[index + 3] = tri.attributes.position[3];
+  array[index + 4] = tri.attributes.position[4];
+  array[index + 5] = tri.attributes.position[5];
+  array[index + 6] = tri.attributes.position[6];
+  array[index + 7] = tri.attributes.position[7];
+  array[index + 8] = tri.attributes.position[8];
 
   // Calculate second face (2, 3, 1) just for the last vertex.
   tri.attributes.position.set(0,
