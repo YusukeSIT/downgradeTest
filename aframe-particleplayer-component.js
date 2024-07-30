@@ -967,16 +967,16 @@ AFRAME.registerComponent('particleplayer', {
 });
 
 // Use triangle geometry as a helper for rotating.
-/*
+
 const tri = (function() {
-  const tri = new THREE.Geometry();
+  const tri = new THREE.BufferGeometry();
   tri.vertices.push(new THREE.Vector3());
   tri.vertices.push(new THREE.Vector3());
   tri.vertices.push(new THREE.Vector3());
   tri.faces.push(new THREE.Face3(0, 1, 2));
   return tri;
 })();
-*/
+
 /**
  * Faces of a plane are v0, v2, v1 and v2, v3, v1.
  * Positions are 12 numbers: [v0, v1, v2, v3].
