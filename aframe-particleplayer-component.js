@@ -975,7 +975,8 @@ const tri = (function() {
 	vertices.push(new THREE.Vector3());
 	vertices.push(new THREE.Vector3());
 	tri.setFromPoints( vertices );
-  tri.setIndex(new THREE.BufferAttribute( [ 0, 1, 2 ], 1 ));
+  tri.setIndex(new THREE.BufferAttribute( new Float32Array([ 0, 1, 2 ]), 1 ));
+  console.log(tri);
   return tri;
 })();
 
