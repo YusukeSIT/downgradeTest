@@ -970,10 +970,10 @@ AFRAME.registerComponent('particleplayer', {
 
 const tri = (function() {
   const tri = new THREE.BufferGeometry();
-  const vertices = []
-	vertices.push(new THREE.Vector3())
-	vertices.push(new THREE.Vector3())
-	vertices.push(new THREE.Vector3())
+  const vertices = [];
+	vertices.push(new THREE.Vector3());
+	vertices.push(new THREE.Vector3());
+	vertices.push(new THREE.Vector3());
 	tri.setFromPoints( vertices );
   tri.setIndex(new THREE.BufferAttribute( [ 0, 1, 2 ], 1 ));
   return tri;
