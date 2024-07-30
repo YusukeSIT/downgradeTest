@@ -1015,10 +1015,7 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
-  /*
-  tri.vertices[0].add(position);
-  tri.vertices[1].add(position);
-  tri.vertices[2].add(position);
+  console.log(tri.attributes.position.array[0]);
   array[index + 0] = tri.vertices[0].x;
   array[index + 1] = tri.vertices[0].y;
   array[index + 2] = tri.vertices[0].z;
@@ -1028,7 +1025,6 @@ function transformPlane(
   array[index + 6] = tri.vertices[2].x;
   array[index + 7] = tri.vertices[2].y;
   array[index + 8] = tri.vertices[2].z;
-  */
 
   // Calculate second face (2, 3, 1) just for the last vertex.
   tri.attributes.position.set(0,
@@ -1051,15 +1047,12 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
-  /*
-  tri.vertices[0].add(position);
-  tri.vertices[1].add(position);
-  tri.vertices[2].add(position);
+  
   array[index + 9] = tri.vertices[2].x;
   array[index + 10] = tri.vertices[2].y;
   array[index + 11] = tri.vertices[2].z;
-	*/
 	
+
   geometry.attributes.position.needsUpdate = true;
 }
 module.exports.transformPlane = transformPlane;
