@@ -963,7 +963,7 @@ AFRAME.registerComponent('particleplayer', {
     };
   })(),
 
-  _transformPlane: transformPlane
+  //_transformPlane: transformPlane
 });
 
 // Use triangle geometry as a helper for rotating.
