@@ -1,7 +1,7 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+/******/  WebGLRenderer.useLegacyLights = true;
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
