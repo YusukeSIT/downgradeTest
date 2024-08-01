@@ -972,9 +972,9 @@ AFRAME.registerComponent('particleplayer', {
 const tri = (function() {
   const tri = new THREE.BufferGeometry();
   const vertices = new Float32Array( [
-    -5, 0, 0, // vertex 1
-    5, 0, 0,  // vertex 2 
-    0, 5, 0   // vertex 3
+    0, 0, 0, // vertex 1
+    0, 0, 0,  // vertex 2 
+    0, 0, 0   // vertex 3
   ], 3 );
 	tri.setAttribute('position', vertices);
   tri.setIndex(new THREE.BufferAttribute( new Float32Array([ 0, 1, 2 ]), 1 ));
@@ -996,27 +996,20 @@ function transformPlane(
   const index = particleIndex * NUM_PLANE_POSITIONS;
 
   // Calculate first face (0, 2, 1).
-  tri.attributes.position.set(0,
-    originalArray[index + 0],
-    originalArray[index + 1],
-    originalArray[index + 2]
-  );
-  tri.attributes.position.set(1,
-    originalArray[index + 3],
-    originalArray[index + 4],
-    originalArray[index + 5]
-  );
-  tri.attributes.position.set(2,
-    originalArray[index + 6],
-    originalArray[index + 7],
-    originalArray[index + 8]
-  );
+  tri.attributes.position.[0] = originalArray[index + 0];
+  tri.attributes.position.[1] = originalArray[index + 1];
+  tri.attributes.position.[2] = originalArray[index + 2];
+  tri.attributes.position.[3] = originalArray[index + 3]; 
+  tri.attributes.position.[4] = originalArray[index + 4]; 
+  tri.attributes.position.[5] = originalArray[index + 5]; 
+  tri.attributes.position.[6] = originalArray[index + 6]; 
+  tri.attributes.position.[7] = originalArray[index + 7]; 
+  tri.attributes.position.[8] = originalArray[index + 8];  
   if (rotation) {
     tri.rotateX(rotation.x);
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
-  console.log(tri.attributes.position[0]);
   array[index + 0] = tri.attributes.position[0];
   array[index + 1] = tri.attributes.position[1];
   array[index + 2] = tri.attributes.position[2];
@@ -1028,21 +1021,16 @@ function transformPlane(
   array[index + 8] = tri.attributes.position[8];
 
   // Calculate second face (2, 3, 1) just for the last vertex.
-  tri.attributes.position.set(0,
-    originalArray[index + 3],
-    originalArray[index + 4],
-    originalArray[index + 5]
-  );
-  tri.attributes.position.set(1,
-    originalArray[index + 6],
-    originalArray[index + 7],
-    originalArray[index + 8]
-  );
-  tri.attributes.position.set(2,
-    originalArray[index + 9],
-    originalArray[index + 10],
-    originalArray[index + 11]
-  );
+
+  tri.attributes.position.[0] = originalArray[index + 3]; 
+  tri.attributes.position.[1] = originalArray[index + 4]; 
+  tri.attributes.position.[2] = originalArray[index + 5]; 
+  tri.attributes.position.[3] = originalArray[index + 6]; 
+  tri.attributes.position.[4] = originalArray[index + 7]; 
+  tri.attributes.position.[5] = originalArray[index + 8]; 
+  tri.attributes.position.[6] = originalArray[index + 9]; 
+  tri.attributes.position.[7] = originalArray[index + 10]; 
+  tri.attributes.position.[8] = originalArray[index + 11]; 
   if (rotation) {
     tri.rotateX(rotation.x);
     tri.rotateY(rotation.y);
