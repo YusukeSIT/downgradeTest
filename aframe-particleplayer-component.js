@@ -994,6 +994,7 @@ function transformPlane(
 ) {
   const array = geometry.attributes.position.array;
   const index = particleIndex * NUM_PLANE_POSITIONS;
+  const tArray = new THREE.Vector3();
 
   // Calculate first face (0, 2, 1).
   tri.attributes.position[0] = originalArray[index + 0];
@@ -1010,6 +1011,18 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
+  tArray.x = tri.attributes.position[0];
+  tArray.y = tri.attributes.position[1];
+  tArray.z = tri.attributes.position[2];
+  tArray.add(position);
+  tArray.x = tri.attributes.position[3];
+  tArray.y = tri.attributes.position[4];
+  tArray.z = tri.attributes.position[5];
+  tArray.add(position);
+  tArray.x = tri.attributes.position[6];
+  tArray.y = tri.attributes.position[7];
+  tArray.z = tri.attributes.position[8];
+  tArray.add(position);
   array[index + 0] = tri.attributes.position[0];
   array[index + 1] = tri.attributes.position[1];
   array[index + 2] = tri.attributes.position[2];
@@ -1036,7 +1049,18 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
-  
+  tArray.x = tri.attributes.position[0];
+  tArray.y = tri.attributes.position[1];
+  tArray.z = tri.attributes.position[2];
+  tArray.add(position);
+  tArray.x = tri.attributes.position[3];
+  tArray.y = tri.attributes.position[4];
+  tArray.z = tri.attributes.position[5];
+  tArray.add(position);
+  tArray.x = tri.attributes.position[6];
+  tArray.y = tri.attributes.position[7];
+  tArray.z = tri.attributes.position[8];
+  tArray.add(position);
   array[index + 9] = tri.attributes.position[6];
   array[index + 10] = tri.attributes.position[7];
   array[index + 11] = tri.attributes.position[8];
