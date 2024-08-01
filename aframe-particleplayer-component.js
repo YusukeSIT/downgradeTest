@@ -1,7 +1,7 @@
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/  WebGLRenderer.useLegacyLights = true;
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/
@@ -493,6 +493,7 @@ const OFFSCREEN_VEC3 = new THREE.Vector3(-99999, -99999, -99999);
 /**
  * Particle Player component for A-Frame.
  */
+THREE.WebGLRenderer.useRegacyLights = true;
 AFRAME.registerComponent('particleplayer', {
   schema: {
     blending: {
