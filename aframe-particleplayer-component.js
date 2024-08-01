@@ -493,7 +493,8 @@ const OFFSCREEN_VEC3 = new THREE.Vector3(-99999, -99999, -99999);
 /**
  * Particle Player component for A-Frame.
  */
-THREE.WebGLRenderer.useRegacyLights = true;
+var renderer = new THREE.WebGLRenderer;
+renderer.useRegacyLights = true;
 AFRAME.registerComponent('particleplayer', {
   schema: {
     blending: {
