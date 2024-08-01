@@ -493,6 +493,7 @@ const OFFSCREEN_VEC3 = new THREE.Vector3(-99999, -99999, -99999);
 /**
  * Particle Player component for A-Frame.
  */
+
 AFRAME.registerComponent('particleplayer', {
   schema: {
     blending: {
@@ -538,7 +539,6 @@ AFRAME.registerComponent('particleplayer', {
     this.sprite_rotation = false;
     this.systems = null;
     this.useRotation = false;
-    this.el.renderer.useLegacyLights = true;
   },
 
   update: function(oldData) {
