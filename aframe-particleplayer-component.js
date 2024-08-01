@@ -1048,9 +1048,9 @@ function transformPlane(
     tri.rotateZ(rotation.z);
   }
   
-  array[index + 9] = tri.vertices[2].x;
-  array[index + 10] = tri.vertices[2].y;
-  array[index + 11] = tri.vertices[2].z;
+  array[index + 9] = tri.attributes.position[6];
+  array[index + 10] = tri.attributes.position[7];
+  array[index + 11] = tri.attributes.position[8];
 	
 
   geometry.attributes.position.needsUpdate = true;
