@@ -1012,6 +1012,15 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }	
+  tri.attributes.position[0] += positon.x;
+  tri.attributes.position[1] += positon.y;
+  tri.attributes.position[2] += positon.z;
+  tri.attributes.position[3] += positon.x;
+  tri.attributes.position[4] += positon.y;
+  tri.attributes.position[5] += positon.z;
+  tri.attributes.position[6] += positon.x;
+  tri.attributes.position[7] += positon.y;
+  tri.attributes.position[8] += positon.z;
   array[index + 0] = tri.attributes.position[0];
   array[index + 1] = tri.attributes.position[1];
   array[index + 2] = tri.attributes.position[2];
@@ -1038,6 +1047,15 @@ function transformPlane(
     tri.rotateY(rotation.y);
     tri.rotateZ(rotation.z);
   }
+  tri.attributes.position[0] += positon.x;
+  tri.attributes.position[1] += positon.y;
+  tri.attributes.position[2] += positon.z;
+  tri.attributes.position[3] += positon.x;
+  tri.attributes.position[4] += positon.y;
+  tri.attributes.position[5] += positon.z;
+  tri.attributes.position[6] += positon.x;
+  tri.attributes.position[7] += positon.y;
+  tri.attributes.position[8] += positon.z;
   
   array[index + 9] = tri.attributes.position[6];
   array[index + 10] = tri.attributes.position[7];
