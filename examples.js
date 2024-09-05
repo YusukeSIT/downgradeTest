@@ -15,8 +15,7 @@ AFRAME.registerComponent('trigger', {
         Math.random() * 2,
         -5 - Math.random() * 2
       ),
-      rotation: new THREE.Euler(Math.random() * 1 - .5, 0, 0),
-      color: new THREE.Color("rgb(200, 0, 0)")
+      rotation: new THREE.Euler(Math.random() * 1 - .5, 0, 0)
     });
   }
 });
