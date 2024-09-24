@@ -578,7 +578,7 @@ AFRAME.registerComponent('particleplayer', {
 
     this.indexPool = new Array(this.numParticles);
 
-    var materialParams = {
+    const materialParams = {
       color: new THREE.Color(data.color),
       side: THREE.DoubleSide,
       blending: BLENDINGS[data.blending],
@@ -587,6 +587,7 @@ AFRAME.registerComponent('particleplayer', {
       opacity: data.opacity,
       transparent: !!data.img || data.blending !== 'normal' || data.opacity < 1
     };
+    console.log(materialParams);
     if (SHADERS[data.shader] !== undefined) {
       this.material = new SHADERS[data.shader](materialParams);
     } else {
