@@ -578,7 +578,7 @@ AFRAME.registerComponent('particleplayer', {
 
     this.indexPool = new Array(this.numParticles);
 
-    const materialParams = {
+    var materialParams = {
       color: new THREE.Color(data.color),
       side: THREE.DoubleSide,
       blending: BLENDINGS[data.blending],
