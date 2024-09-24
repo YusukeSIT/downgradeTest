@@ -587,9 +587,9 @@ AFRAME.registerComponent('particleplayer', {
       opacity: data.opacity,
       transparent: !!data.img || data.blending !== 'normal' || data.opacity < 1
     };
-    console.log(materialParams);
     if (SHADERS[data.shader] !== undefined) {
       this.material = new SHADERS[data.shader](materialParams);
+      console.log(this.material);
     } else {
       this.material = new SHADERS['flat'](materialParams);
     }
